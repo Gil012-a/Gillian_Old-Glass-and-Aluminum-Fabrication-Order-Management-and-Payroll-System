@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI AGENT</title>
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+
+    <aside id="sidebar">
+        <img src="A.S. De Leon.png" alt="Glass and Aluminum Order Management and Payroll System" id="logo">
+        <nav>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="customer-orders.php">Customer Orders</a>
+            <a href="sales-report.php">Sales Report</a>
+            <a href="employee-payroll.php">Employee Payroll</a>
+            <a href="ai_agent.php" class="active" aria-current="page">AI Agent</a>
+        </nav>
+        <div id="account">
+            <span>Owner</span>
+            <a href="logout.php">Log out</a>
+        </div>
+    </aside>
+
+    <main id="chatbotContainer">
+        <header>AI AGENT For A.S. De Leon</header>
+        <small>Ask in plain language.</small>
+
+             <div class="request-types"
+             <button type="button" data-example="Which product sold the most last month?">
+                <strong>Business Information</strong>
+                <small>Look up orders, cutomers and statuses</small>
+            </button>
+            <button type="button" data-example="What is the total sales for this month?">
+                <strong>Sales Report</strong>
+                <small>Get a summary of your sales performance</small>
+            </button>
+            <button type="button" data-example="Generate a sales report for October">
+                <strong>Sales Report </strong>
+                <small>Ready-Generated Report</small>
+            </button>
+            </div>
+
+        <section id="chatbot">
+            <div id="chatbotMessages" aria-live="polite">
+                <div class="message agent">Hello! How can I assist you today?</div>
+            
+            
+                <div class="message user">Which product sold the most last month?</div>
+                <div class="message agent">
+                    <p>Last month, <div Product="" name=""> Was your top seller.</div></p>
+                    <div class="result-cards">
+                        <div><small>Units Sold</small><span>[00]</span></div>
+                        <div><small>Sales</small><span>Php[00]</span></div>
+                        <div><small>Total</small><span>[00]%</span></div>
+                    </div>
+                    <a href="sales_report.php">View Detailed Report</a>
+                </div>
+            </div>
+
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </section>
+    </main>
+    
+</body>
+</html>
